@@ -1,0 +1,91 @@
+.App {
+  min-height: 100vh;
+  color: #20231f;
+}
+
+.App header {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem clamp(1.25rem, 6vw, 5rem);
+  background: #fffdf7;
+  color: #254d38;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  box-shadow: 0 2px 12px rgb(35 49 38 / 7%);
+}
+
+.Overlay {
+  position: fixed;
+  z-index: 2;
+  inset: 0;
+  background: rgb(19 28 22 / 58%);
+  backdrop-filter: blur(3px);
+}
+
+.Alert {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: min(28rem, calc(100vw - 2rem));
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid #e9e7df;
+  border-radius: 1rem;
+  background: #fffdf9;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 24%);
+  text-align: left;
+}
+
+.Alert h4 {
+  margin: 0 0 0.75rem;
+  color: #263b2e;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+.Alert p {
+  margin: 0 0 1.75rem;
+  color: #62685f;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.Button {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 0.65rem;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.Button:hover {
+  filter: brightness(0.9);
+}
+
+.Button:active {
+  transform: translateY(1px);
+}
+
+.Button:focus-visible {
+  outline: 3px solid #d5b66a;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .App header {
+    font-size: 1.25rem;
+  }
+
+  .Alert {
+    padding: 1.5rem;
+  }
+}
