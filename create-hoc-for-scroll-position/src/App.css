@@ -1,0 +1,92 @@
+#root {
+  min-height: 100vh;
+}
+
+.App {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 0 clamp(1.25rem, 6vw, 6rem) 4rem;
+  color: #202923;
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(188, 215, 172, 0.28), transparent 34rem),
+    #f6f7f2;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  min-height: 5.5rem;
+  border-bottom: 1px solid rgba(32, 41, 35, 0.12);
+  color: #263c2d;
+  font-size: 0.9rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.BasicTracker {
+  box-sizing: border-box;
+  width: min(100%, 34rem);
+  margin: clamp(5rem, 15vh, 10rem) auto 1.25rem;
+  padding: clamp(1.75rem, 5vw, 3rem);
+  border: 1px solid rgba(36, 61, 43, 0.12);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 1.5rem 4rem rgba(41, 58, 43, 0.08);
+}
+
+.BasicTracker p {
+  margin: 0 0 1.5rem;
+  color: #67736a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.Row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.Row span {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: #f2f5ef;
+  color: #294a34;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+}
+
+.App > p {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(36, 61, 43, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: #67736a;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .BasicTracker {
+    margin-top: 18vh;
+  }
+
+  .Row {
+    gap: 0.65rem;
+  }
+
+  .Row span {
+    padding: 1rem 0.75rem;
+  }
+}
